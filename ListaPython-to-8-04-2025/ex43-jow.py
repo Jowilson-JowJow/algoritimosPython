@@ -5,4 +5,4 @@ print(lista)
 print(lista1)
 #outra forma
 lista2=list(map(lambda x: x**2, lista))
-print(lista2)
+print(lista2) 
