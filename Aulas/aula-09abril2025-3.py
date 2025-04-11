@@ -3,6 +3,6 @@ nota1=int(input('Digite a nota N1 do aluno: '))
 nota2=int(input('Digite a nota N2 do aluno: '))
 media=(nota1+nota2)/2
 if (media>=7):
-    print('Aprovado\nSua média é %.2f'%media)
+    print('Aprovado\nSua média é %.24f'%media)
 else:
-    print('Reprovado\nSua média é %.2f'%media)
+    print('Reprovado\nSua média é %.24f'%media)
