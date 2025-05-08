@@ -23,15 +23,20 @@ while True:
             print (lista_clientes[6])
         elif x=='2':
             deposito=int(input('Qual o valor a depositar: (R$) '))
+            while deposito <=0:
+                print('valor incorreto')
+                deposito=int(input('Qual o valor a depositar: (R$) '))
             lista_clientes[6]=lista_clientes[6]+deposito
             print(lista_clientes[6])
         elif x=='3':
             saque=int(input("Digite o valor para saque: (R$) "))
-            lista_clientes[6]=lista_clientes[6]-saque
-            if lista_clientes[6]<0:
-                print('proibido o saque.')
-                lista_clientes[6]=lista_clientes[6]+saque
-                print(lista_clientes[6])
+            while saque <=0:
+                print('valor incorreto')
+                saque=int(input("Digite o valor para saque: (R$) "))
+            if lista_clientes[6]<saque:  
+                 print('proibido o saque.')
+            else:
+                lista_clientes[6]=lista_clientes[6]-saque
             print(lista_clientes[6])
         elif x=='4':
             break
