@@ -11,7 +11,7 @@ def pg_an(a1,q,n):
     return result
 
 def n_pg(a1,q,result):
-    n=(math.log(result,10)/(math.log(a1*q,10)))+1
+    n=(math.log(result/a1,10)/(math.log(q,10)))+1
     return n
 
 def soma_pg(a1, q, n):
@@ -36,5 +36,5 @@ print(pg_an(2,2,10))
 print(n_pg(1,2,512))
 #exercicio 3
 print(pg_an(1,-3,-3))
-#exercico 4
+#exercico 4 ta errado
 print(n_pg(100,2,3200)*20)

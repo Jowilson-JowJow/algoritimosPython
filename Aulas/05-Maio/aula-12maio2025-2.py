@@ -3,7 +3,6 @@ num_eleitores=int(input('Digite a quantidade de eleitores: '))
 votos_1=0
 votos_2=0
 votos_3=0
-y=0
 for i in range(num_eleitores):
     x=input('digite: \n1--candidato João Honesto\n2--candidato Tiririca\n3--candidato ficha limpa')
     if x=='1':
