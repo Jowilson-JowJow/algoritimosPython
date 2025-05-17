@@ -40,7 +40,7 @@ tradutor={
 }
 
 while True:
-    menu=input("Digite: \n1--para traduzir palavra em inglês: \n2--para adicionar palavra em inglês: \ndigite x para sair").lower()
+    menu=input("Digite: \n1--para traduzir palavra em inglês: \n2--para adicionar palavra em inglês: \ndigite x para sair: ").lower()
     if menu=='1':
         palavra=input('Digite uma palvra em inglês: ').lower()
         if palavra in tradutor:
