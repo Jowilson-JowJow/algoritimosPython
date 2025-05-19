@@ -1,5 +1,5 @@
 #Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
-#mostre no final a soma dos numeros desse intervalo
+#Altere o programa anterior para mostrar no final a soma dos números.
 num1=int(input('Digite um numero: '))
 num2=int(input('Digite um numero: '))
 x=0
@@ -15,5 +15,5 @@ else:
         print(i, end=' 5')
         x=x+i
     print('\n',x)
-        
+
 #ver esse codigo acho que ele esta errado
