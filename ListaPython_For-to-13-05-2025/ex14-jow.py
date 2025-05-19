@@ -1,1 +1,5 @@
-#O Departamento Estadual de Meteorologia lhe contratou para desenvolver um programa que leia um conjunto indeterminado de temperatura, bem como o mês e o ano que ocorreu essa temperatura, e informe ao final a menor e a maior temperaturas informadas, o mês e o ano em que elas ocorrera, bem como a média de todas as temperaturas.
+#O Departamento Estadual de Meteorologia lhe contratou para desenvolver um programa que leia um conjunto 
+# indeterminado de temperatura, bem como o mês e o ano que ocorreu essa temperatura, e informe ao final
+# a menor e a maior temperaturas informadas, o mês e o ano em que elas ocorrera, bem como a média de todas
+# as temperaturas.
+

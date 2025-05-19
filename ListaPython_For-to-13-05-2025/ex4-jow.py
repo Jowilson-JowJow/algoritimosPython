@@ -2,18 +2,15 @@
 #Altere o programa anterior para mostrar no final a soma dos números.
 num1=int(input('Digite um numero: '))
 num2=int(input('Digite um numero: '))
-x=0
+soma=0
 if num1>num2:
     for i in range(num2+1,num1):
-        print(i,end='-')
-        x=x+i
-    print('\n',x)
+        print(i)
+        soma+=i
 elif num1==num2:
     print('não existe intervalo')
 else:
     for i in range(num1+1, num2):
-        print(i, end=' 5')
-        x=x+i
-    print('\n',x)
-
-#ver esse codigo acho que ele esta errado
+        print(i)
+        soma+=i
+print(soma)

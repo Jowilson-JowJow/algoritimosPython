@@ -18,5 +18,5 @@ if votos_1>votos_2 and votos_1>votos_3:
     print('João honesto ganhou com: ',votos_1,'votos')
 elif votos_2>votos_1 and votos_2>votos_3:
     print('Tiririca ganhou com: ',votos_2,'votos')
-if votos_3>votos_1 and votos_3>votos_2:
+elif votos_3>votos_1 and votos_3>votos_2:
     print('Fixa limpa ganhou com: ',votos_3,'votos')
