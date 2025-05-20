@@ -2,4 +2,7 @@
 # indeterminado de temperatura, bem como o mês e o ano que ocorreu essa temperatura, e informe ao final
 # a menor e a maior temperaturas informadas, o mês e o ano em que elas ocorrera, bem como a média de todas
 # as temperaturas.
-
+dados=int(input('Digite quantos dados de temperatura será informado:'))
+for i in  range(1,dados+1):
+    #print(f'{i}° dado')
+    
