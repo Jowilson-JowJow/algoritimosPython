@@ -1,4 +1,4 @@
-#Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números pares e a quantidade de
+#Faça um programa que peça 10 números inteiros, calcule (#o que é pra calcular?) e mostre a quantidade de números pares e a quantidade de
 # números impares.
 impar=0
 par=0
