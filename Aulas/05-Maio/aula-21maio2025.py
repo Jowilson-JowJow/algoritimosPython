@@ -14,8 +14,11 @@ while True:
     cli_sobrenome=input('Digite o sobrenome: ')
     cli_rg=int(input('Digite o RG (apenas numeros): '))
     cli_cpf=int(input('Digite o CPF (apemas numeros): '))
-    cli_end=int(input('Digite o endereço (apemas numeros): '))#separar em rua, bairro, numero cidade e cpe
+    cli_rua=(input('Digite o nome da rua: '))
+    cli_num=int(input('Digite o numero da residencia: '))
+    cli_bairro=(input('Digite o bairro: '))
+    cli_cidade=(input('Digite a cidade: '))
     cli_fone=int(input('Digite o fone (apemas numeros): '))
     cli_idade=int(input('Digite o idade (apemas numeros): '))
-    lista_cli.extend([cli_nome,cli_sobrenome,cli_rg,cli_cpf,cli_end,cli_fone,cli_idade])
-
+    lista_cli.extend([cli_nome,cli_sobrenome,cli_rg,cli_cpf,cli_rua,cli_num,cli_bairro, cli_cidade, cli_fone,cli_idade])
+    print(lista_cli)
