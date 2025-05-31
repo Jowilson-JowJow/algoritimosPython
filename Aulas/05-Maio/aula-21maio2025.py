@@ -21,20 +21,18 @@ while True:
             rg=int(input('Digite o RG: '))
             cpf=int(input('Digite o CPF: '))
             endereco=input('Digite o Endereço: ')
-            cel=int(input('Digite o cel: '))
+            cel=int(input('Digite o celular: '))
             idade=int(input('Digite a Idade: '))
-            # cliente.extend([nome,sobrenome,rg,cpf,endereco,cel,idade])
             cliente.append({
     'nome': nome,
     'sobrenome': sobrenome,
     'rg': rg,
     'cpf': cpf,
     'endereco': endereco,
-    'cel': cel,
-    'idade': idade
-})
+    'celular': cel,
+    'idade': idade})
 
-        except:
+        except ValueError:
             print('Dados Incorretos')
 
 #dados passagens
@@ -44,19 +42,17 @@ while True:
             origem=input('Digite a origem: ')
             duracao=input('Digite a duração do VOO: ')
             preco=float(input('Digite o valor da passagem: '))
-            desc=0.95*preco
-            # passagem.extend([destino,origem,duracao,preco,desc])
-            cliente.append({
-    'nome': nome,
-    'sobrenome': sobrenome,
-    'rg': rg,
-    'cpf': cpf,
-    'endereco': endereco,
-    'cel': cel,
-    'idade': idade
-})
+            desc=0.05*preco
+            preco_desc=0.95*preco
+            passagem.append({
+    'destino da passagem': destino,
+    'origem da passagem': origem,
+    'tempo de voo': duracao,
+    'valor da passagem': preco,
+    'desconto de 5%': desc,
+    'valor da passagem com desconto': preco_desc})
 
-        except:
+        except ValueError:
             print('Dados Incorretos')
 
 #dados avião
@@ -67,51 +63,44 @@ while True:
             tempovoo=(input('Digite quanto tempo de voo tem o avião: '))
             cor=input('Digite a cor do avião: ')
             numacentos=int(input('Digite quantos assentos tem o avião: '))
-            # aviao.extend([modelo,ano,tempovoo,cor,numacentos])
-            cliente.append({
-    'nome': nome,
-    'sobrenome': sobrenome,
-    'rg': rg,
-    'cpf': cpf,
-    'endereco': endereco,
-    'cel': cel,
-    'idade': idade
-})
+            aviao.append({
+    'modelo do avião': modelo,
+    'ano de fabricação': ano,
+    'horas de voo': tempovoo,
+    'a cor do avião': cor,
+    'quantidade de assentos': numacentos})
 
-        except:
+        except ValueError:
             print('Dados Incorretos')
 
     #dados da tripulação:
     elif menu=='4':
         try:
             numtripulantes=int(input('Digite quantos tripulantes terá o avião nessa viagem: '))
-        except:
+        except ValueError:
             print('é preciso ser um numero')
+            continue
         for i in range(numtripulantes):
             try:
-                nomepiloto=input('Digite o nome do piloto: ')
-                funcao=input('Digite a função: ')
-                idadetrip=int(input('Digite a idade do tripulante: '))
-                dataadimissao=input('Digite a data de adimissão: ')
-                fone=int(input('Digite o telefone de contato: '))
-                # tripulacao.extend([nomepiloto, funcao, idadetrip, dataadimissao, fone])
-                cliente.append({
-    'nome': nome,
-    'sobrenome': sobrenome,
-    'rg': rg,
-    'cpf': cpf,
-    'endereco': endereco,
-    'cel': cel,
-    'idade': idade
-})
+                nomepiloto=input('Digite o nome do comissario de voo: ')
+                funcao=input('Digite a sua função: ')
+                idadetrip=int(input('Digite a sua idade: '))
+                dataadimissao=input('Digite a data de sua admissão: ')
+                fone=int(input('Digite o  seu telefone de contato: '))
+                tripulacao.append({
+    'Qual o nome do comissario de voo ': nomepiloto,
+    'qual a sua função': funcao,
+    'qual a sua idade': idadetrip,
+    'qual a data de admissão': dataadimissao,
+    'qual o telefone': fone})
 
-            except:
+            except ValueError:
                 print('Dados Incorretos')
     
     #relatorio
     elif menu=='5':
         while True:
-            menu1=input("Digite: \n1--para telatório cliente: \n2--para relatório da passagem: \n3--para relatório do avião: \n4--relatório da tripulação: \ndigite x para sair: ").lower()
+            menu1=input("Digite: \n1--para relatório cliente: \n2--para relatório da passagem: \n3--para relatório do avião: \n4--relatório da tripulação: \ndigite x para sair: ").lower()
             try:
                 if menu1=='1':
                     for i, c in enumerate(cliente):
@@ -120,17 +109,26 @@ while True:
                             print(f"{chave.capitalize()}: {valor}")
 
                 elif menu1=='2':
-                   # print(f' Informações da passagem: {passagem}')
+                   for i, c in enumerate(passagem):
+                        print(f"\nPassagens {i+1}:")
+                        for chave, valor in c.items():
+                            print(f"{chave.capitalize()}: {valor}")
                 elif menu1=='3':
-                    #print(f' Os dados do avição são: {aviao}')
+                    for i, c in enumerate(aviao):
+                        print(f"\nAvião {i+1}:")
+                        for chave, valor in c.items():
+                            print(f"{chave.capitalize()}: {valor}")
                 elif menu1=='4':
-                    #print(f'os dados da tripulação são: {tripulacao}')
+                    for i, c in enumerate(tripulacao):
+                        print(f"\nTripulação {i+1}:")
+                        for chave, valor in c.items():
+                            print(f"{chave.capitalize()}: {valor}")
                 elif menu1=='x':
-                    #print('Encerrando o programa...')
+                    print('Encerrando o programa...')
                     break
                 else:
                     print('Opção inválida.')
-            except:
+            except ValueError:
                 print('Dados digitados de forma incorretos')
     elif menu == 'x':
         print('Encerrando o programa...')
@@ -141,5 +139,6 @@ while True:
 
 
 
-
+#acredito que consegui fazer, acho que ainda pode ser melhorado, mas a ajuda do gravena nas monitorias é que proporciono o termino do codigo, a parte do print dos relatorios fiz de uma forma que imprimia a lista e ficava muito ruim ai pedi ajuda a IA para ver se tinha outra forma de fazer ela me sugeriu fazer por dicionario depois da explicação de como se faz consegui alterar essa parte. 
+#seria bom receber um feedback. se puder fico agradecido.
 
