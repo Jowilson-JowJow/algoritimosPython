@@ -1,7 +1,7 @@
 #exercicios de tratamento de exceção. slide do exercicios no teams no dia 21 de maio de 2025
 #é para fazer cadastro do cliente (nome, sobrenome, rg, cfp, endereço, fone, idade)
 #é para fazer cadastro da passagem (destino, origem, duração, valor passagem, desconto 5%)
-#é para fazer cadastro avião (modelo, ano, hoaras do voo, cor, quantidade de passageiros)
+#é para fazer cadastro avião (modelo, ano, horas do voo, cor, quantidade de passageiros)
 #é para fazer cadastro tripulação (nome, descrição cargo, idade, data de adimissão, fone)
 # O Algoritmo deve ter a opção de cadastrar, imprimir relatórios e encerrar.
 #Utilize todas as técnicas possíveis, while, for, try, etc...
@@ -18,10 +18,10 @@ while True:
         try:
             nome=input('Digite o nome: ')
             sobrenome=input('Digite o sobrenome: ')
-            rg=int(input('Digite o RG: '))
-            cpf=int(input('Digite o CPF: '))
+            rg=input('Digite o RG: ')
+            cpf=input('Digite o CPF: ')
             endereco=input('Digite o Endereço: ')
-            cel=int(input('Digite o celular: '))
+            cel=input('Digite o CPF: ')
             idade=int(input('Digite a Idade: '))
             cliente.append({
     'nome': nome,
@@ -32,8 +32,8 @@ while True:
     'celular': cel,
     'idade': idade})
 
-        except ValueError:
-            print('Dados Incorretos')
+        except ValueError as e:
+            print(f"Erro ao cadastrar. Verifique os dados numéricos. Detalhes: {e}")
 
 #dados passagens
     elif menu=='2': 
@@ -52,8 +52,8 @@ while True:
     'desconto de 5%': desc,
     'valor da passagem com desconto': preco_desc})
 
-        except ValueError:
-            print('Dados Incorretos')
+        except ValueError as e:
+            print(f"Erro ao cadastrar. Verifique os dados numéricos. Detalhes: {e}")
 
 #dados avião
     elif menu=='3':
@@ -70,8 +70,8 @@ while True:
     'a cor do avião': cor,
     'quantidade de assentos': numacentos})
 
-        except ValueError:
-            print('Dados Incorretos')
+        except ValueError as e:
+            print(f"Erro ao cadastrar. Verifique os dados numéricos. Detalhes: {e}")
 
     #dados da tripulação:
     elif menu=='4':
@@ -82,20 +82,20 @@ while True:
             continue
         for i in range(numtripulantes):
             try:
-                nomepiloto=input('Digite o nome do comissario de voo: ')
-                funcao=input('Digite a sua função: ')
-                idadetrip=int(input('Digite a sua idade: '))
-                dataadimissao=input('Digite a data de sua admissão: ')
-                fone=int(input('Digite o  seu telefone de contato: '))
+                nomepiloto=input('Nome: ')
+                funcao=input('Função: ')
+                idadetrip=int(input('Idade: '))
+                dataadimissao=input('Data de admissão: ')
+                fone=int(input('Telefone de contato: '))
                 tripulacao.append({
-    'Qual o nome do comissario de voo ': nomepiloto,
-    'qual a sua função': funcao,
-    'qual a sua idade': idadetrip,
-    'qual a data de admissão': dataadimissao,
-    'qual o telefone': fone})
+    'Nome ': nomepiloto,
+    'Função': funcao,
+    'Idade': idadetrip,
+    'Data de admissão': dataadimissao,
+    'telefone': fone})
 
-            except ValueError:
-                print('Dados Incorretos')
+           except ValueError as e:
+            print(f"Erro ao cadastrar. Verifique os dados numéricos. Detalhes: {e}")
     
     #relatorio
     elif menu=='5':
@@ -128,8 +128,8 @@ while True:
                     break
                 else:
                     print('Opção inválida.')
-            except ValueError:
-                print('Dados digitados de forma incorretos')
+            except ValueError as e:
+                print(f"Erro ao cadastrar. Verifique os dados numéricos. Detalhes: {e}")
     elif menu == 'x':
         print('Encerrando o programa...')
         break
