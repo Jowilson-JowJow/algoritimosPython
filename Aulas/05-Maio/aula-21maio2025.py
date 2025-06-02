@@ -21,7 +21,7 @@ while True:
             rg=input('Digite o RG: ')
             cpf=input('Digite o CPF: ')
             endereco=input('Digite o Endereço: ')
-            cel=input('Digite o CPF: ')
+            cel=input('Digite o Celular: ')
             idade=int(input('Digite a Idade: '))
             cliente.append({
     'nome': nome,
@@ -94,8 +94,8 @@ while True:
     'Data de admissão': dataadimissao,
     'telefone': fone})
 
-           except ValueError as e:
-            print(f"Erro ao cadastrar. Verifique os dados numéricos. Detalhes: {e}")
+            except ValueError as e:
+                print(f"Erro ao cadastrar. Verifique os dados numéricos. Detalhes: {e}")
     
     #relatorio
     elif menu=='5':
