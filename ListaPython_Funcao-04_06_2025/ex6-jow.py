@@ -4,5 +4,5 @@ def fat (pos):
     for n in range(1,pos+1):
         resultado=resultado*n
     return resultado
-a=int(input('Enter number to get its factorial:0 '))
+a=int(input('Enter number to get its factorial: '))
 print(fat(a))
