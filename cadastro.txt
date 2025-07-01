@@ -1,6 +1,0 @@
-novo cadastro
-novo cadastro
-Nome:kal,Idade:19,Sexo:m,CPF:11,Endereço:casa,Cidade:cg,Estado:ms
----------------------------------------------------------------------------------
-Nome:joão,Idade:19,Sexo:pansexual,CPF:11111111111,Endereço:rua ana julia n° 25,Cidade:cg,Estado:ms
----------------------------------------------------------------------------------
