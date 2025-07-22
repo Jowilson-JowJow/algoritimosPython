@@ -1,4 +1,4 @@
-#
+#Crie uma função que calcule juros compostos: montante = capital * (1 + taxa) ** tempo.
 def juros_compostos(capital, taxa, tempo):
     return capital * ((1 + taxa) ** tempo)
 
