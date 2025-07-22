@@ -69,5 +69,41 @@ def remove_space():# serve para remover espaços ou caractere especial porem nã
     space_remove_word1=word1.strip('*')
     print(f'A palavra (ou frase) digitada , co espaço, foi: "{word1}"\napós remover o espaço ficou: "{space_remove_word1}"')
 
+def remove_suffix():#Remove prefixo/sufixo exato se presente; caso contrário retorna cópia idêntica. Útil p/ parsing seguro sem startswith + slicing manual.
+    word=input('type a word (or phrase): ')
+    sulffix_remove=input('type a sulffix or prefix to remove: ')
+    new_word=word.removesuffix(sulffix_remove)#remove só o sulfixo
+    print(f'A palavra ou frase digitada foi: "{word}"\nremovendo o sulfixo "{sulffix_remove}"\na nova palavra é: "{new_word}"')
 
-remove_space() 
+
+def remove_prefix():#Remove prefixo/sufixo exato se presente; caso contrário retorna cópia idêntica. Útil p/ parsing seguro sem startswith + slicing manual.
+    word=input('type a word (or phrase): ')
+    prefix_remove=input('type a sulffix or prefix to remove: ')
+    new_word=word.removeprefix(prefix_remove)#remove só o prefixo
+    print(f'A palavra ou frase digitada foi: "{word}"\nremovendo o sulfixo "{prefix_remove}"\na nova palavra é: "{new_word}"')
+
+def center_text():#Centraliza o texto dentro de um espaço de largura width, preenchendo os lados com o caractere fillchar.
+    word=input('type a word: ')
+    character=int(input('type how many characters you want to center: '))
+    center_word=word.center(character)
+    print(f'"{center_word}"')
+    
+def center_text_character():#Centraliza o texto dentro de um espaço de largura width, preenchendo os lados com o caractere fillchar.
+    word=input('type a word: ')
+    space=int(input('type how many characters you want to center: '))
+    character=input('type a character to searate and interleave: ')
+    center_word=word.center(space,character)
+    print(f'"{center_word}"')
+
+def align_left():
+    word=input('type a word (or phrase): ')
+    space=int(input('enter thedesired width: '))
+    character=input('type the desired character: ')
+    word_left=word.ljust(space,character)
+    print(word_left)
+
+
+align_left()
+
+
+
