@@ -7,3 +7,5 @@ fr=input('Digite uma frase: ')
 letra=input('Digite a letra que você quer substituir nessa frase: ')
 subst=input('Digite a nova letra ou caractere: ')
 substituir(fr,letra,subst)
+
+
