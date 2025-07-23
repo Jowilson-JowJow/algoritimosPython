@@ -95,15 +95,40 @@ def center_text_character():#Centraliza o texto dentro de um espaço de largura 
     center_word=word.center(space,character)
     print(f'"{center_word}"')
 
-def align_left():
+def align_left():#função alinha palavra ou frase a direita com ou sem caractere especial
     word=input('type a word (or phrase): ')
     space=int(input('enter thedesired width: '))
     character=input('type the desired character: ')
-    word_left=word.ljust(space,character)
-    print(word_left)
+    if character=='':
+        word_left=word.ljust(space)
+        print(word_left)
+    else:
+        word_left=word.ljust(space,character)
+        print(word_left)
+
+def align_right():#função alinha a palavra ou texto a esquerda com ou sem caractere especial
+    word=input('Type a word (or phrase):')
+    space=int(input('enter the desired width: '))
+    character=input('type the desired character: ')
+    if character=='':
+        word_right=word.rjust(space)
+        print(word_right)
+    else:
+        word_right=word.rjust(space,character)
+        print(word_right)
+
+def word_zero():#função preecnhe com zeros, respeitando sinais
+    word=input('type a word (or phrase): ')
+    width=int(input('how many zeros will be filled:  '))#para que o zfill prencha com zeros a esquerda o valor para width tem que ser maior que o input em word
+    zero_word=word.zfill(width)
+    print(f'o texto digitado foi: "{word}"\ne foi solicitado acrescentar "{width}" zeros a esquerda\no texto ficou assim "{zero_word}"')
+
+def count_word():
+    word=input('Type a word (or phrase): ')
+    character=input('Enter the character to be counted: ')
+    word_size=word.count(character)
+    print(word_size)
 
 
-align_left()
-
-
+count_word()
 
