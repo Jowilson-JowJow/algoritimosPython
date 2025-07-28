@@ -1,3 +1,4 @@
+package AulasJava_thiago;
 
 public class exemplo02
 {

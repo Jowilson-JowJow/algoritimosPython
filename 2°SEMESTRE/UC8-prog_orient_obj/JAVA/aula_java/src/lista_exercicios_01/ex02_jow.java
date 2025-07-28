@@ -12,7 +12,7 @@ public class ex02_jow {
         int num=scan.nextInt();
 
         if (num>=10){
-            System.out.println("O numero digitdo é MAIOR qu 10.");
+            System.out.println("O numero digitdo é MAIOR que 10.");
         }
         else{
             System.out.println("O numero digitado é MENOR que 10.");

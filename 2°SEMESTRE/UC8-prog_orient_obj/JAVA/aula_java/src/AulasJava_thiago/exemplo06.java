@@ -1,3 +1,4 @@
+package AulasJava_thiago;
 public class exemplo06 {
     public static void main(String[] args) {
         int x,y;

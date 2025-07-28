@@ -1,3 +1,4 @@
+package AulasJava_thiago;
 import java.util.Scanner;
 
 public class exemplo11 {

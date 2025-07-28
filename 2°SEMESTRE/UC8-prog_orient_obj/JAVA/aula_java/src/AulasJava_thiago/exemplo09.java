@@ -1,3 +1,4 @@
+package AulasJava_thiago;
 //declarar o scanner -->> input para isso deve-se importar o java.util.Scanner
 import java.util.Scanner;
 
