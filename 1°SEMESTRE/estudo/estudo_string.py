@@ -189,7 +189,6 @@ def word_replace():#Substitui ocorrências de uma substring por outra dentro de 
     print(f'A palavra (ou frase) digitada foi: "{word}"\nA palavra a ser substituida é: "{word_change}"\na palavra nova a ser inserida na troca é: "{word_new}"\nE a frase nova é: "{new_word}"')
 
 
-word_replace()
 
 
 
@@ -200,8 +199,5 @@ word_replace()
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cd0a33bf4a63009502d4b637adb925e38ba1d392
 
