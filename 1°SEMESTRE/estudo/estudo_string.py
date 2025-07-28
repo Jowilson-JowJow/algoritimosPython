@@ -123,12 +123,84 @@ def word_zero():#função preecnhe com zeros, respeitando sinais
     zero_word=word.zfill(width)
     print(f'o texto digitado foi: "{word}"\ne foi solicitado acrescentar "{width}" zeros a esquerda\no texto ficou assim "{zero_word}"')
 
-def count_word():
+def count_word():#Conta quantas vezes a substring sub aparece sem sobreposição.
     word=input('Type a word (or phrase): ')
     character=input('Enter the character to be counted: ')
     word_size=word.count(character)
-    print(word_size)
+    print(f'a palavra digitada foi: "{word}"\no caractere a ser contado é: "{character}"\ne apareceu "{word_size}" vezes na palavra')
+
+def word_find():#função usa o comando find que a partir do texto ou palavra digitado indica a sua primeira ocorrencia da esquerda para a direita, sua sintaxe é (string.find(sub,start,end)) onde sub=o texto que vc quer procurar/start=(opcional) posição incial da busca/end=(opcional)posição final da busca
+    word=input('type a word (or phrase): ')
+    character=input('Enter the character to be counted: ')
+    find_word=word.find(character)
+    print(f'a palavra digitada foi: "{word}"\ne o caractere a ser procurado a sua recorrencia é: "{character}"\naparece no index "{find_word}" da palavra digitada')
+
+def word_rfind():##função usa o comando rfind que a partir do texto ou palavra digitado indica a sua ultima ocorrencia da direita para a esquerda, sua sintaxe é (string.rfind(sub,start,end)) onde sub=o texto que vc quer procurar/start=(opcional) posição incial da busca/end=(opcional)posição final da busca 
+    word=input('type a word (or phrase): ')
+    character=input('Enter the character to be counted: ')
+    rfind_word=word.rfind(character)
+    print(f'a palavra digitada foi: "{word}"\ne o caractere a ser procurado a sua recorrencia é: "{character}"\naparece no index "{rfind_word}" da palavra digitada')
+
+def word_index():#funciona igual ao find porem se não encontra a sub string retorna ValueError em vez de -1 como no find
+    word=input('type a word (or phrase): ')
+    character=input('Enter the character to be counted: ')
+    index_word=word.index(character)
+    print(f'a palavra digitada foi: "{word}"\ne o caractere a ser procurado a sua recorrencia é: "{character}"\naparece no index "{index_word}" da palavra digitada')
+
+def word_rindex(): #funciona igual ao rfind porem se não encontra a sub string retorna ValueError em vez de -1 como no rfind
+    word=input('type a word (or phrase): ')
+    character=input('Enter the character to be counted: ')
+    rindex_word=word.rindex(character)
+    print(f'a palavra digitada foi: "{word}"\ne o caractere a ser procurado a sua recorrencia é: "{character}"\naparece no index "{rindex_word}" da palavra digitada')
+
+def start_swith_word():#esse metodo verifica se a sting começa exatamente com a substring fornecida
+    word=input('type a word (or phrase): ')
+    word_start=input('Enter the substring to be start phrase: ')
+    word1=word.startswith(word_start)
+    print(f'a palavra digitda foi "{word}"\na parte procurada é: "{word_start}"\nfoi encontrada: {word1}')
+
+def end_swith_word():#esse metodo verifica se a sting termina exatamente com a substring fornecida
+    word=input('type a word (or phrase): ')
+    word_end=input('Enter the substring to be start phrase: ')
+    word1=word.endswith(word_end)
+    print(f'a palavra digitda foi "{word}"\na parte procurada é: "{word_end}"\nfoi encontrada: {word1}')
+
+def quebra_linha():#o \n pula linha
+    word1=input('Type a word: ')
+    word2=input('Type a new word: ')
+    print(f'"{word1}"\n"{word2}"')
+
+def quebra_linha1():#o \r pula a primeira linha e escreve apenas a segunda linha sobre a primera liha 
+    word1=input('Type a word: ')
+    word2=input('Type a new word: ')
+    print(f'"{word1}"\r"{word2}"')
+          
+def string_in_list():#pega uma frase e separa as palavras em uma lista
+    word=input('Type a phrase: ')      
+    list_word=word.split()
+    print(f'a frase digitada foi: "{word}"\na lista que separa a frase é:\n"{list_word}"')
 
 
-count_word()
+#tirar duvida do funcionamento de str.splitlines(keepends=False) Divide em linhas por quebras universais (\n, \r, \r\n, etc.) e str.partition(sep) / rpartition Sempre retorna tupla (head, sep, tail); útil quando quer preservar separador único. (docs.python.org)
+
+def word_replace():#Substitui ocorrências de uma substring por outra dentro de uma string. O parâmetro opcional count define o número máximo de substituições---Ideal para trocar palavras, corrigir texto, ou realizar edições simples de conteúdo textual. Su sintaxe é texto.replace("velho","novo",count)
+    word=input('Type three or more words (or a phrase): ')
+    word_change=input ('Enter the word to e changed: ')
+    word_new=input('new word: ')
+    change_num=int(input('How many times will it be changed: '))
+    new_word=word.replace(word_change,word_new,change_num)
+    print(f'A palavra (ou frase) digitada foi: "{word}"\nA palavra a ser substituida é: "{word_change}"\na palavra nova a ser inserida na troca é: "{word_new}"\nE a frase nova é: "{new_word}"')
+
+
+word_replace()
+
+
+
+
+
+
+
+
+
+
 
