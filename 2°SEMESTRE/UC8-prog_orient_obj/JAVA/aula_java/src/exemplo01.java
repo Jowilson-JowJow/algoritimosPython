@@ -1,5 +1,5 @@
 
-public class Main
+public class exemplo01
 {
 	public static void main(String[] args) {
      //printar inteiros %d

@@ -6,12 +6,10 @@ def text_slicing():#função que vai pedir uma palavra ou frase e fazer o fatiam
     print(f'the word (or phrase) entered was: {word}\nshowing the slicing of the word (or phrase): {slicing_word} ')
     #a função do fatiamento sempre gera uma nova  string
 
-
 def word_length():#função que vai contar o comprimento(tamanho) de uma palavra ou frase
     word=input('type a word (or phrase): ')#solicita que se digite uma palavra ou frase
     word_size=len(word)#conta o comprimento(tamanho) da palavra ou frase digitada inclui na contagem espaços
     print(f'the word (or phrase) entered was: {word}\nthe length of the word (or phrase) typed is: {word_size}')
-
 
 def add_words():#função que vai somar duas palavras ou frase
     word1=input('Type the word (or phrase): ')#solicita digitar uma frase ou palavra
@@ -74,7 +72,6 @@ def remove_suffix():#Remove prefixo/sufixo exato se presente; caso contrário re
     sulffix_remove=input('type a sulffix or prefix to remove: ')
     new_word=word.removesuffix(sulffix_remove)#remove só o sulfixo
     print(f'A palavra ou frase digitada foi: "{word}"\nremovendo o sulfixo "{sulffix_remove}"\na nova palavra é: "{new_word}"')
-
 
 def remove_prefix():#Remove prefixo/sufixo exato se presente; caso contrário retorna cópia idêntica. Útil p/ parsing seguro sem startswith + slicing manual.
     word=input('type a word (or phrase): ')
@@ -203,4 +200,8 @@ word_replace()
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd0a33bf4a63009502d4b637adb925e38ba1d392
 

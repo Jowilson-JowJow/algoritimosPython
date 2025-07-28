@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main
+public class exemplo05
 {
 	public static void main(String[] args) {
      //printar inteiros %d
