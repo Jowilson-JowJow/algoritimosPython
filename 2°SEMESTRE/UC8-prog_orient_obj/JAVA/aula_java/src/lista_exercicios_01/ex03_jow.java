@@ -17,7 +17,7 @@ public class ex03_jow {
         else{
             System.out.printf("O numero %d é MAIOR que %d",num2,num1);
         }
-
+        scan.close();
     }
     
 }

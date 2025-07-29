@@ -17,7 +17,7 @@ public class ex02_jow {
         else{
             System.out.println("O numero digitado é MENOR que 10.");
         }
-
+        scan.close();
 
     }
 

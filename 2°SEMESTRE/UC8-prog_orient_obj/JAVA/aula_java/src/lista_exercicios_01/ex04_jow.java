@@ -19,5 +19,6 @@ public class ex04_jow {
         else{
             System.out.printf("Os numeros digitados foram %d , %d e %d\n  e NÃO estão em ordem crescente.",num1,num2,num3);
         }
+        scan.close();
     }
 }

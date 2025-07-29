@@ -21,7 +21,6 @@ public class ex01_jow {
         double cubo=Math.pow(num3,3);
 
         System.out.printf("\nO produto do 1° numero com a metade do 2° numero é %.2f\nO triplo do 1° numero somado com o 3° numero é %.2f\nO cubo do 3° numero é %.2f",produto,soma,cubo);
-
-
+        scan.close();
     }
 }
