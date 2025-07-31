@@ -10,7 +10,7 @@ public class ex08_jow {
         Double num=scan.nextDouble();
         Double raiz_num=Math.sqrt(num);
         System.out.printf("A raiz quadrado de %.2f é %.2f%n", num,raiz_num);
-
+        scan.close();
     }
     
 }

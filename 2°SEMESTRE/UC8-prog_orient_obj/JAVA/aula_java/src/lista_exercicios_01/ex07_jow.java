@@ -21,5 +21,6 @@ public class ex07_jow {// Cria a classe pública chamada ex07_jow. Todo programa
             double venda=preco*1.30;
             System.out.printf("A peça de roupa tem preço de custo de %.2f e sera vendida por %.2f%n", preco,venda);
         }
+        scan.close();
     }
 }

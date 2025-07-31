@@ -14,6 +14,7 @@ public class ex09_jow {
         Double num_reversi=num1;
         Double num1_reversi=num;
         System.out.printf("O primeiro numero digitado foi a= %.2f\ne o segundo numero digitado é b= %.2f\nInvertendo seus valores temos: a= %.2f e b= %.2f",num,num1,num_reversi,num1_reversi);
+        scan.close();
 
     }
     
