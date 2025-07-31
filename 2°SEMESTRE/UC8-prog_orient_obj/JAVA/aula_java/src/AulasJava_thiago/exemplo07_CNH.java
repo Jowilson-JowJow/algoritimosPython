@@ -12,6 +12,7 @@ public class exemplo07_CNH {
         }else{
             System.out.println("que pena");
         }
+        scan.close();
     }
     
 }

@@ -6,9 +6,10 @@ public class exemplo05
      //printar inteiros %d
      //printar strings %s
      //printar double %f
-    Scanner sc = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
     System.out.println("Digite um numero: ");
-    int number = sc.nextInt();
+    int number = scan.nextInt();
     System.out.println("O numero digitado foi: "+number);
+    scan.close();
 	}
 }
