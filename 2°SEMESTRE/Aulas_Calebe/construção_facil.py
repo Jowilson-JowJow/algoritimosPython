@@ -1,11 +1,9 @@
 import os
 import datetime
 
-# Garante que a pasta existe
-os.makedirs("2°SEMESTRE/Aulas_Calebe", exist_ok=True)
+os.makedirs("2°SEMESTRE/Aulas_Calebe", exist_ok=True)# Garante que a pasta existe
 
-# Menu principal
-def menu():
+def menu():# Menu principal
     while True:
         print('\n--- MENU PRINCIPAL ---')
         print('1 - Cadastrar Produto')
@@ -36,7 +34,7 @@ def menu():
         else:
             print('Opção Inválida.\nTente novamente.\n')
 
-def cadastrar_produto():
+def cadastrar_produto():#função para cadastrar o produto
     codigo = input('Digite o código do produto: ')
     nome = input('Digite o nome do produto: ')
     categoria = input('Digite a categoria (elétrica, hidráulica, etc): ')
