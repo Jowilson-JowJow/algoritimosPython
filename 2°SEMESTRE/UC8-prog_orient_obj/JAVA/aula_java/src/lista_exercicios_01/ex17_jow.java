@@ -16,12 +16,12 @@ public class ex17_jow {
         Double altura = scan.nextDouble();
 
         if(sexo.equals("f")){
-            Double  peso_ideal=(62.1*altura)-44.7;           
-            System.out.printf("Sue peso ideal é: %.2f kg",peso_ideal);
+           Double  peso_ideal=(62.1*altura)-44.7;           
+            System.out.println("seu peso ideal é: "+ peso_ideal);
         }
         else if (sexo.equals("m")){
             Double peso_ideal=(72.7*altura)-58;
-            System.out.printf("Sue peso ideal é: %.2f kg",peso_ideal);
+            System.out.println("Seu peso ideal é "+ peso_ideal);
         }
         scan.close();
     }
