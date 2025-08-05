@@ -18,18 +18,18 @@ public class ex27_jow {
             System.out.println("4 -- DIVISÃO");
             System.out.println("0 -- SAIR");
             double opcao = scan.nextDouble();
-            
+            if(opcao == 0){
+                System.out.println("Calculadora fechada!!!");
+                break;
+            }
             System.out.println("Digite um numero: ");
             double num1 = scan.nextDouble();
             System.out.println("Digite outro numero");
             double num2 = scan.nextDouble();
             
             double resultado = 0;
-            if(opcao == 0){
-                System.out.println("Calculadora fechada!!!");
-                break;
-            }
-            else if(opcao == 1){
+          
+            if(opcao == 1){
                 resultado=num1+num2;
                 //System.out.println(num1+"+"+num2+"="+resultado);
                 System.out.printf("%.2f + %.2f = %.2f ",num1,num2,resultado);
@@ -39,7 +39,7 @@ public class ex27_jow {
                     resultado=num1-num2;
                     System.out.printf("%.2f - %.2f = %.2f ",num1,num2,resultado);                
                 }
-                else if(num2>num1){
+                else{
                     resultado=num2-num1;
                     System.out.printf("%.2f - %.2f = %.2f ",num2,num1,resultado); 
                 }
