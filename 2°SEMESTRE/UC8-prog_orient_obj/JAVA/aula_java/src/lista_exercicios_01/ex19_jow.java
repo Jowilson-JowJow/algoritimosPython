@@ -19,6 +19,7 @@ public class ex19_jow {
         else{
             System.out.println("APROVADO!");
         }
+        scan.close();
 
 
     }

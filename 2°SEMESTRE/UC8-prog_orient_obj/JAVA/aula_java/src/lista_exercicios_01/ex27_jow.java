@@ -1,10 +1,13 @@
-//Crie uma mini calculadora mostre ao usuário um menu com 4 opções de operações matemáticas (as básicas, por exemplo). O usuário escolhe uma das opções e o seu programa então pede dois valores numéricos e realiza a operação, mostrando o resultado e finalizando o programa.
-
+//Crie um programa de uma calculadora simples com as 4 operações básicas, apresente o menu de opções abaixo, leia dois números reais. Em seguida mostre o resultado da operação entre os dois números recebidos. Escreva uma mensagem de erro se a opção for inválida. Escolha a opção:
+//1- Soma de 2 números.
+//2- Diferença entre 2 números (maior pelo menor).
+//3- Produto entre 2 números.
+//4- Divisão entre 2 números (o denominador não pode ser zero).
 package lista_exercicios_01;
 
 import java.util.Scanner;
 
-public class ex24_jow {
+public class ex27_jow {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         while (true){
@@ -32,16 +35,27 @@ public class ex24_jow {
                 System.out.printf("%.2f + %.2f = %.2f ",num1,num2,resultado);
             }
             else if(opcao == 2){
-                resultado=num1-num2;
-                System.out.printf("%.2f - %.2f = %.2f ",num1,num2,resultado);
+                if(num1>num2){
+                    resultado=num1-num2;
+                    System.out.printf("%.2f - %.2f = %.2f ",num1,num2,resultado);                
+                }
+                else if(num2>num1){
+                    resultado=num2-num1;
+                    System.out.printf("%.2f - %.2f = %.2f ",num2,num1,resultado); 
+                }
             }
             else if(opcao == 3){
                 resultado=num1*num2;
                 System.out.printf("%.2f * %.2f = %.2f ",num1,num2,resultado);
             }
             else if(opcao == 4){
-                resultado=num1/num2;
-                System.out.printf("%.2f / %.2f = %.2f ",num1,num2,resultado);
+                if(num2==0){
+                    System.out.println("O denominador é zero!!!\nA divisão da erro!!!");
+                }
+                else{
+                    resultado=num1/num2;
+                    System.out.printf("%.2f / %.2f = %.2f ",num1,num2,resultado);
+                }
             }
             else{
                 System.out.println("Digite uma opção valida");
