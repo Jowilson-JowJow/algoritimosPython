@@ -48,19 +48,19 @@ public class ex32_jow {
         }
         else if( codigo == 103){
             valor=unidades*25.5;
-            System.out.printf("Seu pedido:\n%d X-Salada --------------- R$ %.2f",unidades,valor);        
+            System.out.printf("Seu pedido:\n%d X-Bacon --------------- R$ %.2f",unidades,valor);        
         }
         else if( codigo == 104){
             valor=unidades*17;
-            System.out.printf("Seu pedido:\n%d X-Salada --------------- R$ %.2f",unidades,valor);        
+            System.out.printf("Seu pedido:\n%d X-Burguer --------------- R$ %.2f",unidades,valor);        
         }
         else if( codigo == 105){
             valor=unidades*9.5;
-            System.out.printf("Seu pedido:\n%d X-Salada --------------- R$ %.2f",unidades,valor);        
+            System.out.printf("Seu pedido:\n%d Suco de Laranja --------------- R$ %.2f",unidades,valor);        
         }
         else if( codigo == 106){
             valor=unidades*6;
-            System.out.printf("Seu pedido:\n%d X-Salada --------------- R$ %.2f",unidades,valor);        
+            System.out.printf("Seu pedido:\n%d Refrigerante --------------- R$ %.2f",unidades,valor);        
         }
         else{
             System.out.println("Codigo Errado!!!");
