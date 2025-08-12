@@ -13,8 +13,8 @@ public class ex6_jow {
             int num = scan.nextInt();
             x = x +num;
         }
-        scan.close();
         System.out.println("A soma dos numeros digitados é: "+x);
+        scan.close();
     }
     
 }

@@ -22,9 +22,9 @@ public class ex9_jow {
                 menor=num;
             }
             
+            scan.close();
         }
         System.out.printf("O maior numero digitado foi %d\nO menor numero digitado foi %d",maior,menor);
-        scan.close();
 
     }
     
