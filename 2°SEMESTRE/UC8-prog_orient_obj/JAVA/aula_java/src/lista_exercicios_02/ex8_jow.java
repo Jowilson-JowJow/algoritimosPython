@@ -22,7 +22,7 @@ public class ex8_jow {
         // }
         // System.out.println(media);
         // scan.close();
-        //o codigo comentado foi a primera tentativa e que foi errado. pr causa da forma que o for funciona
+        //o codigo comentado foi a primera tentativa e que foi errado. por causa da forma que o for funciona
         int cont =0;
         double media= 0;
         double soma =0;
