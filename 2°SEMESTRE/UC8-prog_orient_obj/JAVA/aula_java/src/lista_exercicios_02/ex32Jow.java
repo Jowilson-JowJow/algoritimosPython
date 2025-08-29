@@ -3,7 +3,7 @@ package lista_exercicios_02;
 
 import java.util.Scanner;
 
-public class ex32_jow {
+public class ex32Jow {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         char[] vetor = new char[10];

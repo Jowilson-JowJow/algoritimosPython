@@ -3,7 +3,7 @@ package lista_exercicios_02;
 
 import java.util.Scanner;
 
-public class ex37_jow {
+public class ex37Jow {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int r1, r2;

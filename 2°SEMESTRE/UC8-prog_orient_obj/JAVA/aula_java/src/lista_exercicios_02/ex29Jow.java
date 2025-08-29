@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ex29_jow {
+public class ex29Jow {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         int i = 0;

@@ -3,7 +3,7 @@ package lista_exercicios_02;
 
 import java.util.Scanner;
 
-public class ex8_jow {
+public class ex8Jow {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         // double media = 0;

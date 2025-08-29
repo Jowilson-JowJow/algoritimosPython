@@ -1,9 +1,9 @@
-//Escreva um programa que peça ao usuário para digitar 10 valores e some-os.
+//Escreva um programa que leia 10 inteiros e imprima sua média.
 package lista_exercicios_02;
 
 import java.util.Scanner;
 
-public class ex6_jow {
+public class ex7Jow {
     public static void main (String[] args){
         Scanner scan = new Scanner(System.in);
         int i=0;
@@ -13,7 +13,8 @@ public class ex6_jow {
             int num = scan.nextInt();
             x = x +num;
         }
-        System.out.println("A soma dos numeros digitados é: "+x);
+        double media = x/10.0;
+        System.out.printf("A média dos numeros digitados é: %.2f",media);
         scan.close();
     }
     

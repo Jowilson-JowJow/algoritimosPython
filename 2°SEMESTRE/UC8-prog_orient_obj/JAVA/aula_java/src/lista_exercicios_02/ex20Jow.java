@@ -5,7 +5,7 @@ package lista_exercicios_02;
 
 import java.util.Scanner;
 
-public class ex20_jow {
+public class ex20Jow {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 

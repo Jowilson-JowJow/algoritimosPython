@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ex34_jow {
+public class ex34Jow {
     public static void main( String[] args){
         Scanner scan = new Scanner(System.in);
         List<Integer> num_primos=new ArrayList<>();

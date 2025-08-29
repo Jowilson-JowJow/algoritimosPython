@@ -3,7 +3,7 @@ package lista_exercicios_02;
 
 import java.util.Scanner;
 
-public class ex16_jow {
+public class ex16Jow {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite um numero (vamos somar todos os numeros até o valor digitado): ");

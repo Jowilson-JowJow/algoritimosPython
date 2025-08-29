@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ex15_jow {
+public class ex15Jow {
                public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite um numero: ");

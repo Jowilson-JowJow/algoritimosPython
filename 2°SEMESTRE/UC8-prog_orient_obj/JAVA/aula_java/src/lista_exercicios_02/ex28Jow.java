@@ -3,7 +3,7 @@ package lista_exercicios_02;
 
 import java.util.Scanner;
 
-public class ex28_jow {
+public class ex28Jow {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Digite o ano atual (ex: 2025): ");

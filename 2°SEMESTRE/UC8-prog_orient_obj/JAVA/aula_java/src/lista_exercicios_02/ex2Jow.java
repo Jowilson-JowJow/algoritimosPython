@@ -1,7 +1,7 @@
 //Crie um programa que determine o mostre os 5 primeiros números ímpares, considerando números maiores que 0.
 package lista_exercicios_02;
 
-public class ex2_jow {
+public class ex2Jow {
     public static void main(String[] args){
         int i=0;
         int x=0;

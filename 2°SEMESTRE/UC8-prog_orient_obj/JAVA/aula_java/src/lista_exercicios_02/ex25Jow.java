@@ -3,7 +3,7 @@ package lista_exercicios_02;
 
 import java.util.Scanner;
 
-public class ex25_jow {
+public class ex25Jow {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         System.out.println("VAmos calcular potenciação:");

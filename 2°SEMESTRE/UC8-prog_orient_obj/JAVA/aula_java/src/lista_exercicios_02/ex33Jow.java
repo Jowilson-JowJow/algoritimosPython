@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ex33_jow {
+public class ex33Jow {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         List<Double> medias = new ArrayList<>();

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ex27_jow {
+public class ex27Jow {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         List<Integer> num_digitados= new ArrayList<>();

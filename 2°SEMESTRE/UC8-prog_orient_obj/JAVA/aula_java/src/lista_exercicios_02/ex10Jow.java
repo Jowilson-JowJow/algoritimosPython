@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ex10_jow {
+public class ex10Jow {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         System.out.println("Didite um numero (vou imprimir todos os numeros impares de zero até onumero escolhido): ");
