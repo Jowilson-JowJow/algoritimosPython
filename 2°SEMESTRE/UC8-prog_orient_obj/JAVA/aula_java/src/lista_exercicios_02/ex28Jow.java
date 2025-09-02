@@ -15,11 +15,11 @@ public class ex28Jow {
             System.out.println("Tem menos de um ano de contratação, sem aumento.");
         } else {
             double salario = 4000.0;
-            double taxaAumento = 0.015; // 1.5% do primeiro aumento (ano 2020)
+            double taxaAumento = 0.015;
 
             for (int i = 1; i <= anos; i++) {
-                salario = salario + salario * taxaAumento; // Aplica o aumento
-                if (i >= 2) { // A partir do segundo aumento, dobra a taxa
+                salario = salario + salario * taxaAumento;
+                if (i >= 2) {
                     taxaAumento = taxaAumento * 2;
                 }
             }
