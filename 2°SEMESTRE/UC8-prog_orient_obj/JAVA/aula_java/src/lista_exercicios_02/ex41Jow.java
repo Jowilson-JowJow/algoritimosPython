@@ -5,11 +5,9 @@
 // A diferença entre a soma dos quadrados dos dez primeiros números naturais e o quadrado da soma e 3025-385 = 2640.
 package lista_exercicios_02;
 
-//import java.util.Scanner;
 
 public class ex41Jow {
     public static void main(String[] args){
-        //Scanner scan = new Scanner(System.in);
         int i,j;
         int soma1=0;
         int soma2=0;
@@ -19,16 +17,13 @@ public class ex41Jow {
         for(i=1;i<101;i++){
             quadrado=(int)Math.pow(i,2);
             soma1=soma1+quadrado;
-            System.out.println(soma1);
         }
-        // System.out.println(soma1);
-        // for(j=1;j<101;j++){
-        //     soma2=soma2+j;
-        //     System.out.println(soma2);
-        // }
-        // resultado1=(int)Math.pow(soma2,2);
-        // System.out.println(resultado1);
-        // resultado2=soma2-soma1;
-        // System.out.println(resultado2);
+        System.out.println(soma1);
+        for(j=1;j<101;j++){
+            soma2=soma2+j;
+        }
+        resultado1=(int)Math.pow(soma2,2);
+        resultado2=resultado1-soma1;
+        System.out.printf("A soma dos quadrados dos 100 primeiros numeros naturais é: %d\nA quadrado da soma dos 100 primeiros numeros naturais é: %d\nA diferença entre eles é: %d",soma1,resultado1,resultado2);
     }
 }
