@@ -10,7 +10,7 @@ public class ex22Jow{
         int numero = scan.nextInt();
     
         int soma = 0;
-        boolean primeiro = true; // para controlar o "+" entre divisores
+        boolean primeiro = true;
     
         System.out.print("Soma dos divisores de " + numero + " (excluindo ele próprio): ");
     
@@ -18,7 +18,7 @@ public class ex22Jow{
             if (numero % i == 0) {
                 soma += i;
                 if (primeiro) {
-                    System.out.print(i); // não coloca "+" antes do primeiro
+                    System.out.print(i);
                     primeiro = false;
                 } else {
                     System.out.print(" + " + i);

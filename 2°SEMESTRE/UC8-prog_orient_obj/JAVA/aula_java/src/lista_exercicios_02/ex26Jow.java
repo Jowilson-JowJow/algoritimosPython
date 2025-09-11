@@ -10,6 +10,7 @@ public class ex26Jow {
         for (int n = 1; n <= 50; n++) {
             double termo = (2.0 * n - 1) / n;
             soma += termo;
+            System.out.println(soma);
         }
 
         System.out.printf("A soma da sequência é: %.3f\n", soma);

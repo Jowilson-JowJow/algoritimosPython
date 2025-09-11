@@ -11,6 +11,6 @@ public class ex23Jow {
             }
         }
     
-            System.out.println("A soma de todos os números menores que 1000 múltiplos de 3 ou 5 é: " + soma);
+        System.out.println("A soma de todos os números menores que 1000 múltiplos de 3 ou 5 é: " + soma);
     }
 }

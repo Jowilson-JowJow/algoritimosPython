@@ -12,8 +12,6 @@ public class ex34Jow {
         System.out.println("Digite um numero maior que 1: ");
         int num = scan.nextInt();
         int i;
-        //int j;
-
         if(num<=1){
             System.out.println("Numero Errado!!!");
         }
@@ -30,13 +28,6 @@ public class ex34Jow {
         else{
             System.out.println("O numero digitado não é primo!!!");
         }
-
-        // System.out.println("Minha lista tem "+num_primos.size());
-
-        // for(j=0;j<num_primos.size();j++){
-        //     System.out.println(num_primos.get(j));
-        // }
-
         scan.close();
     
     }
