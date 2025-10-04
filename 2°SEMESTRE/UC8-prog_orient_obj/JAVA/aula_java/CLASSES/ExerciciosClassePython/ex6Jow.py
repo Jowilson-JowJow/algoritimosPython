@@ -4,7 +4,7 @@
 # imprimir o valor do raio;
 # calcular a área do círculo;
 # calcular a circunferência do círculo.
-
+import math
 class Circulo:
     def __init__(self, raio):
         self.raio=raio
@@ -13,10 +13,10 @@ class Circulo:
         print(f"O Raio é: {self.raio} cm" )
 
     def areaCirculo(self):
-        return 3.14*(self.raio**2)
+        return math.pi*(self.raio**2)
     
     def perimetroCirculo(self):
-        return 2*3.14*self.raio
+        return 2*math.pi*self.raio
         
 circ1=Circulo(30)
 circ1.valorRaio()
