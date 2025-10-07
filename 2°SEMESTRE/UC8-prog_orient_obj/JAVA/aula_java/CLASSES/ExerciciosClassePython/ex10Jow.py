@@ -8,7 +8,7 @@
 # calcular_imposto()  -  deve considerar o IPVA do carro em 2,5% do valor.
 
 class Carro:
-    def __init__(self, modelo, marca, cor, ano, valor, nivel, consumo):
+    def __init__(self, modelo, marca, cor, ano, valor, consumo):
         self.modelo = modelo
         self.marca = marca
         self.cor = cor
@@ -16,4 +16,18 @@ class Carro:
         self.valor = valor
         self.nivel = 5
         self.consumo = consumo
+        self.status=False
+
+    def ligar(self):
+        if (self.status==False):
+            self.status=True
+            return self.status
+        
+    
+        
+    
+
+carro1=Carro("uno","fiat","branco",2010,15000, 15)
+if carro1.ligar():
+    print("CARRO LIGADO")
         
