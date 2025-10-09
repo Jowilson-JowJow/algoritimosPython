@@ -22,12 +22,27 @@ class Carro:
         if (self.status==False):
             self.status=True
             return self.status
+
+    def abastecer(self):
+        if(self.nivel==1):
+            print("ABASTEÇA O CARRO")
+
+    def andar(self,km):
+        print(f"O carro andou {km} km")
+
+    def verificar_nivel(self):
+        print(f"O carro gastou {self.consumo} litros por km")
+
+    def calcular_imoposto(self):
+        ipva=self.valor*0.025
+        print(f"O IPVA é R$ {ipva}")
         
-    
-        
-    
 
 carro1=Carro("uno","fiat","branco",2010,15000, 15)
 if carro1.ligar():
     print("CARRO LIGADO")
-        
+
+carro1.abastecer()
+carro1.andar(200)
+carro1.verificar_nivel()
+carro1.calcular_imoposto()
