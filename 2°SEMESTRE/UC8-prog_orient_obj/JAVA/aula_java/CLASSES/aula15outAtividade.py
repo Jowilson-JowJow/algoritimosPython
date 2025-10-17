@@ -23,44 +23,17 @@ class Pessoa():
     def __init__(self, nome):
         self.nome=nome
 
-class Conta
+class Conta(Pessoa):
+    def __init__(self, num_conta, agencia, saldo, extrato, senha):
+        self.num_conta = num_conta
+        self.agencia = agencia
+        self.saldo = saldo
+        self.extrato = extrato
+        self._senha = senha
+        
+    def depositar(self):
 
 
 
 
-#tentei fazer mas esta errado
-# class Cadastro():
-#     def __init__(self, nome, agencia, conta_corrente, senha):
-#         self.nome=nome
-#         self.agencia=agencia
-#         self.conta_corrente=conta_corrente
-#         self.senha=senha
-#         self.clientes=[]
 
-# class Depositar():
-#     def __init__(self,novo_deposito):
-#         self.novo_deposito=novo_deposito
-    
-#     def deposito (self):
-
-# class Consultar_saldo():
-#     def __init__(self):
-#         self.saldo = 0
-#         if (self.deposito<0):
-#             return self.saldo
-#         elif (self.deposito>0):
-#             self.saldo=self.saldo+self.deposito
-#             return self.saldo
-#         else:
-#             return self.saldo
-
-
-#parte do codigo de outro exercicio para ver como fazer herança de uma classe
-# class Gerente(Funcionario):
-#     def __init__(self, nome, login, senha, setor):
-#         super().__init__(nome, login, senha)
-#         self.setor =setor
-#     def logar(self):##polimorfismo
-#         confirm = input("digite o tokene")
-#         if confirm:
-#             print(f"Gerente {self.nome}logado com sucesso no setor: {self.setor}")
