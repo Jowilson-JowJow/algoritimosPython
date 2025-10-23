@@ -7,7 +7,7 @@
 # Defina as subclasses de Imóvel sendo: Casa, Apartamento; Terreno e Chácara;
 # Defina os atributos específicos para cada sub classe, exemplo: piscina, sala_de_estar, 
 # Quartos, churrasqueira, área m², elevador, área_de_lazer,   .
-faz igual mas diferente
+
 class Imovel:
     def __init__(self, inscricao_municipal, valor_aluguel, iptu):
         self.inscricao_municipal = inscricao_municipal

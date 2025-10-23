@@ -1,3 +1,9 @@
+# 10 - Desenvolva um conjunto de classes para controlar o saldo, depósitos e retiradas de contas bancárias bem como os 
+# dados do titular. Escreva inicialmente um diagrama modelando tanto contas corrente quanto contas poupança e 
+# aplicações em fundo. Em seguida, implemente estas classes em Python.
+
+
+
 class Titular:
     def __init__(self, nome, cpf, endereco):
         self.nome = nome

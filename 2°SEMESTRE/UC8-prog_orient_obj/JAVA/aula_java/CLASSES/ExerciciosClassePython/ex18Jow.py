@@ -5,7 +5,7 @@
 # Subclasses:
 # Crie 5 sub classes de brinquedos com seus respectivos atributos e métodos.
 # Utilize o polimorfismo para reescrever o método herdado da super classe
-faz igual mas diferente
+
 
 # Superclasse Brinquedo
 class Brinquedo:

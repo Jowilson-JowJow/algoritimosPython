@@ -7,7 +7,7 @@
 # Subclasses:
 # Defina as subclasses de Funcionário, exemplo Vendedor e Gerente. Após a criação das subclasses você deve criar atributos e métodos específicos de cada subclasse;
 # Ex: atributo comissão e método bater_meta() para Vendedor e atributo senha para o Gerente.
-faz igual mas diferente
+
 class Funcionario:
     def __init__(self, nome, matricula, salario):
         self.nome = nome

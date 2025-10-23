@@ -6,7 +6,7 @@
 # Subclasses:
 # Defina a subclasse ingressoVIP com os seguintes atributos: camarote, open_bar, open_food, estacionamento -> todos booleanos, True ou False;
 # Acrescente os métodos pegar_bebida() e acessar_camarote();
-faz igual mas diferente
+
 class Ingresso:
     def __init__(self, preco, setor):
         self.preco = preco

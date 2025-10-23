@@ -5,7 +5,7 @@
 # Subclasses:
 # Defina as subclasses CompraAvista e CompraParcelada, na classe de CompraAvista  o método calcular_valor_total() deve ter o atributo desconto e na classe CompraParcelada criar o método simular_numero_de_parcelas.
 # Em cada subclasse definir um métodos getters e setters para os seus atributos.
-faz igual mas diferente
+
 class Compra:
     def __init__(self, numero, produto, valor):
         self.numero = numero

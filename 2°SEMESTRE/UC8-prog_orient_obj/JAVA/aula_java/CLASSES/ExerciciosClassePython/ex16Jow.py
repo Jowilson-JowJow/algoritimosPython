@@ -6,7 +6,7 @@
 # Subclasses:
 # Defina a subclasse PassagemBus e PassagemAviao com os seguintes atributos: portaodeembarque e checkin para classe PassagemAviao, placa e leito par PassagemBus;
 # Crie um novo método específico para cada subclasse. Ex: decolar() e abastecer()
-faz igual mas diferente
+
 class Passagem:
     def __init__(self, preco, assento):
         self.preco = preco

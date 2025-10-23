@@ -1,3 +1,10 @@
+# - Classe Transporte: Você deve analisar a hierarquia do transporte tipo Terrestre e da Classe automóvel para criar as subclasses dos tipos de transporte Aéreo e Aquático. Instancie 3 objetos de cada classe e faça os testes nos atributos e métodos específicos de cada subclasse;
+# Crie duas subclasses de Aquático e Aéreo, exemplo: 
+# Lancha e Navio;
+# AviaoMonomotor e AviaoComercial;
+# Verifique os atributos e métodos específicos de cada subclasse
+
+
 class Transporte:
     def __init__(self, modo_transporte):
         self.modo_transporte = modo_transporte

@@ -5,7 +5,7 @@
 # Subclasses:
 # Defina as subclasses de Pessoa serão Física e Jurídica, estas devem conter além dos atributos herdados de Pessoa seus atributos identificadores, ex: CPF, CNPJ.
 # Além de herdar o método negociar() crie métodos específicos para as subclasses;
-faz igual mas diferente
+
 class Pessoa:
     def __init__(self, nome, telefone, email, endereco):
         self.nome = nome
