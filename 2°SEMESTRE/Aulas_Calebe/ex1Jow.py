@@ -82,3 +82,4 @@ class Pagamento:
     def emitir_recibo(self):
         
 
+# comite hoje
