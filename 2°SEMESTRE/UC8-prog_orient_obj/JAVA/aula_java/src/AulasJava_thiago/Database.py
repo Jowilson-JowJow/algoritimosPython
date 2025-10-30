@@ -97,39 +97,10 @@ class Database:
     
 
 
+if __name__=="__main__":
+    db = Database()
+    db.connect()
+    print("SENDO EXECUTADO PELA MAIN")
 
 
-db = Database()
-db.connect()
-# dados = ("liana","12569874632","11999885522","Sorocaba")
-# cadastro =db.insert(dados)
-# if cadastro == True:
-#     print("Cadastrado com sucesso!!!")
-
-# id_cli=int(input("digite o id que vc queira deletar: "))
-# x=db.delete(id_cli)
-# if x:
-#     print("deletado com sucesso")
-
-# dados = db.select()
-# for cliente in dados:
-#     print(f"id: {cliente[0]} | Nome: {cliente[1]} | CPF: {cliente[2]} | Fone: {cliente[3]}")
-
-# id_select = int (input ("QUAL CLIENTE DESEJA SELECIONAR? "))
-# cli=db.selectById(id_select)
-# print(cli)
-
-
-dados = db.selectById(2)
-dados = list(dados)
-
-dados[1]=input("digite o novo nome: ")
-dados[2]=input("digite o novo cpf: ")
-
-dados=tuple(dados)
-print(dados)
-result = db.update(dados)
-
-if result:
-    print("DADOS ALTERADOS COM SUCESSO")
 
