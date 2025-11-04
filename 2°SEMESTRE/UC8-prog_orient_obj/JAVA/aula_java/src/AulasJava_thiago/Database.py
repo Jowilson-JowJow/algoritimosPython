@@ -53,7 +53,7 @@ class Database:
         finally:
             self.close_connection()
 
-    def selectById(self,id_cli):
+    def select_by_id(self,id_cli):
         self.connect()
         try:
             self.cursor.execute(f"SELECT * FROM cliente WHERE id_cli = {id_cli}")

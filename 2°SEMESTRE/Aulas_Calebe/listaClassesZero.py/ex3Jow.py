@@ -9,9 +9,9 @@
 
 class Alunos:
     
-    def __init__(self, matricula, nome, nota1,nota2, nota3):
-        self.matricula = matricula
+    def __init__(self, nome, matricula, nota1,nota2, nota3):
         self.nome = nome
+        self.matricula = matricula
         self.nota1 = nota1
         self.nota2 = nota2
         self.nota3 = nota3
@@ -23,28 +23,34 @@ class Alunos:
         media_aluno = (self.nota1 + self.nota2 + self.nota3)/3  
         return media_aluno
     
-    
-    
+     
 lista_aluno =[]    
-for i in range(1,6):
+for i in range(0,2):
     nome = input("Infome o nome do aluno: ")
     matricula = input("Infome a matricula do aluno: ")
-    nota1 = input("Infome a nota1 do aluno: ")
-    nota2 = input("Infome a nota2 do aluno: ")
-    nota3 = input("Infome a nota3 do aluno: ")
-    aluno = Alunos(matricula, nome, nota1,nota2, nota3)
+    nota1 = int(input("Infome a nota1 do aluno: "))
+    nota2 = int(input("Infome a nota2 do aluno: "))
+    nota3 = int(input("Infome a nota3 do aluno: "))
+    aluno = Alunos(nome, matricula, nota1,nota2, nota3)
     lista_aluno.append(aluno)
 
 
+nomes_de_alunos = []
+
+for i in range(0, 2):
+    media_do_aluno = lista_aluno[i].media()
+    nome_de_aluno = lista_aluno[i].getnome()
+    a= {"media": media_do_aluno, "nome": nome_de_aluno}
+    nomes_de_alunos.append(a)
+
+   
+for i in range(0,2):##não deu certo
+    print(nomes_de_alunos[i]["media"])
+    print(nomes_de_alunos[i]["nome"])
 
 
 
 
 
-for i in range(0,5):
-    al = lista_aluno[i] 
-    print(al.media()) 
 
-# aluno1=Alunos("1205-2025","jowjow",8,7,9)
-# media_aluno=aluno1.media()
-# print(f"A media do aluno {aluno1.getnome()} é: {media_aluno:.2f}") 
+
