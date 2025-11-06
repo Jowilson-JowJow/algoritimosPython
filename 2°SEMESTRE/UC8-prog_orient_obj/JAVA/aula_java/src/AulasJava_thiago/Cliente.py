@@ -25,12 +25,12 @@ class Cliente:
     def buscar_por_id(self, id):
         self.db = Database()
         dados = self.db.select_by_id(id)
-        return clientes
+        return dados
     
     def atualizar(self, tupla):
         self.db = Database()
-        dados = self.db.select_by_id(tupla)
-        return clientes
+        dados = self.db.update(tupla)
+        return dados
 
     def excluir(self,id):
         self.db = Database()
@@ -68,6 +68,8 @@ cli_atualizar[3]=input("Digite o novo fone: ")
 cli_atualizar[4]=input("Digite o novo cidade: ")
 
 cli_atualizar=tuple(cli_atualizar)
+
+print(cli_atualizar)
 
 resultado=cli.atualizar(cli_atualizar)
 if resultado == True:
