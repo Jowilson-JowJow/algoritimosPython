@@ -82,6 +82,76 @@ class Database:
         except Exception as err:
             print(err)
         
+#fazer abaixo a parte do database para a classe mecanico
+ 
+
+    def insert(self, tupla):
+        self.connect()
+        # tupla = ("Thiago","78965412398","67852147963","CG")
+        try:
+            self.cursor.execute("INSERT INTO cad_mecanico (nome,cpf, cod_mec, fone) VALUES(%s,%s,%s,%s)",tupla)
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def delete(self,id_mec):
+        self.connect()
+        try:
+            self.cursor.execute(f"DELETE FROM cliente WHERE id_mec = {id_mec}")
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def select(self):
+        self.connect()
+        try:
+            self.cursor.execute(f"SELECT * FROM cad_mecanico")
+            result = self.cursor.fetchall()
+            return result
+
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def select_by_id(self,id_mec):
+        self.connect()
+        try:
+            self.cursor.execute(f"SELECT * FROM cad_mecanico WHERE id_mec = {id_mec}")
+            result = self.cursor.fetchone()
+            return result
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def update(self, tupla):
+        self.connect()        
+        try:
+            self.cursor.execute(f"""
+                 UPDATE cliente SET nome = '{tupla[1]}', 
+                cpf = '{tupla[2]}',
+                fone = '{tupla[3]}',
+                cidade = '{tupla[4]}'                
+                WHERE id_cli = {tupla[0]}
+            """)
+            self.conn.commit()
+            return True
+
+        except Exception as err:
+            print(err)
+#fazer abaixo a parte do database para a classe mecanico
         finally:
             self.close_connection()
         
