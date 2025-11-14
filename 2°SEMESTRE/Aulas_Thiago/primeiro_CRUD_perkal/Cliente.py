@@ -10,31 +10,31 @@ class Cliente:
         
 
 
-    def cadastrar(self):
+    def cadastrar_cli(self):
         self.db = Database()
         tupla = (self.nome, self.cpf, self.fone, self.cidade)
-        result = self.db.insert(tupla)
+        result = self.db.insert_cli(tupla)
         return result
 
 
-    def buscar(self):
+    def buscar_cli(self):
         self.db = Database()
-        dados = self.db.select()
+        dados = self.db.select_cli()
         return dados
 
-    def buscar_por_id(self, id):
+    def buscar_por_id_cli(self, id):
         self.db = Database()
-        dados = self.db.select_by_id(id)
+        dados = self.db.select_by_id_cli(id)
         return dados
     
-    def atualizar(self, tupla):
+    def atualizar_cli(self, tupla):
         self.db = Database()
-        dados = self.db.update(tupla)
+        dados = self.db.update_cli(tupla)
         return dados
 
-    def excluir(self,id):
+    def excluir_cli(self,id):
         self.db = Database()
-        dados = self.db.delete(id)
+        dados = self.db.delete_cli(id)
         return dados
 
    

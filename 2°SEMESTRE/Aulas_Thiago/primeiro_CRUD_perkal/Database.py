@@ -15,7 +15,7 @@ class Database:
         else:
             print("erro")
 
-    def insert(self, tupla):
+    def insert_cli(self, tupla):
         self.connect()
         # tupla = ("Thiago","78965412398","67852147963","CG")
         try:
@@ -28,7 +28,7 @@ class Database:
         finally:
             self.close_connection()
 
-    def delete(self,id_cli):
+    def delete_cli(self,id_cli):
         self.connect()
         try:
             self.cursor.execute(f"DELETE FROM cliente WHERE id_cli = {id_cli}")
@@ -40,7 +40,7 @@ class Database:
         finally:
             self.close_connection()
 
-    def select(self):
+    def select_cli(self):
         self.connect()
         try:
             self.cursor.execute(f"SELECT * FROM cliente")
@@ -53,7 +53,7 @@ class Database:
         finally:
             self.close_connection()
 
-    def select_by_id(self,id_cli):
+    def select_by_id_cli(self,id_cli):
         self.connect()
         try:
             self.cursor.execute(f"SELECT * FROM cliente WHERE id_cli = {id_cli}")
@@ -66,7 +66,7 @@ class Database:
         finally:
             self.close_connection()
 
-    def update(self, tupla):
+    def update_cli(self, tupla):
         self.connect()        
         try:
             self.cursor.execute(f"""
@@ -85,7 +85,7 @@ class Database:
 #fazer abaixo a parte do database para a classe mecanico
  
 
-    def insert(self, tupla):
+    def insert_mec(self, tupla):
         self.connect()
         # tupla = ("Thiago","78965412398","67852147963","CG")
         try:
@@ -98,10 +98,10 @@ class Database:
         finally:
             self.close_connection()
 
-    def delete(self,id_mec):
+    def delete_mec(self,id_mec):
         self.connect()
         try:
-            self.cursor.execute(f"DELETE FROM cliente WHERE id_mec = {id_mec}")
+            self.cursor.execute(f"DELETE FROM cad_mecanico WHERE id_mec = {id_mec}")
             self.conn.commit()
             return True
         except Exception as err:
@@ -110,7 +110,7 @@ class Database:
         finally:
             self.close_connection()
 
-    def select(self):
+    def select_mec(self):
         self.connect()
         try:
             self.cursor.execute(f"SELECT * FROM cad_mecanico")
@@ -123,7 +123,7 @@ class Database:
         finally:
             self.close_connection()
 
-    def select_by_id(self,id_mec):
+    def select_by_id_mec(self,id_mec):
         self.connect()
         try:
             self.cursor.execute(f"SELECT * FROM cad_mecanico WHERE id_mec = {id_mec}")
@@ -136,7 +136,7 @@ class Database:
         finally:
             self.close_connection()
 
-    def update(self, tupla):
+    def update_mec(self, tupla):
         self.connect()        
         try:
             self.cursor.execute(f"""
