@@ -7,7 +7,7 @@
 # (c) Encontre o aluno com menor média geral
 # (d) Para cada aluno diga se ele foi aprovado ou reprovado (mínimo 6)
 
-class Alunos:
+class Alunos: 
     def __init__(self, nome, matricula, nota1, nota2, nota3):
         self.nome = nome
         self.matricula = matricula
