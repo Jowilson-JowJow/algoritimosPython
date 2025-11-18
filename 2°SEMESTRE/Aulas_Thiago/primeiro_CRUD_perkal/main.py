@@ -6,7 +6,7 @@ import os
 while True:
     print("SysPerkal")
     print("*"*30)
-    print("Selecione um opção")
+    print("Selecione uma opção:")
     opcao=input("\t1 - Cadastrar\n\t2 - listar\n\t3 - Excluir\n\t4 - Atualisar\n\t0 - sair\n")
     result=0
     if opcao =="0":
