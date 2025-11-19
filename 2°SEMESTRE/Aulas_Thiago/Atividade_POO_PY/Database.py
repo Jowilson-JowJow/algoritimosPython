@@ -16,6 +16,7 @@ class Database:
         else:
             print("erro")
 
+    #para o cliente
     def insert_cliente(self, tupla):
         self.connect()
         try:
@@ -79,6 +80,137 @@ class Database:
         finally:
             self.close_connection()
 
+    #para o vendedor
+    def insert_vendedor(self, tupla):
+        self.connect()
+        try:
+            self.cursor.execute("INSERT INTO vendedores (nome, cod_vendedor, fone) VALUES(%s, %s, %s)", tupla)
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def delete_vendedor(self, id_vendedor):
+        self.connect()
+        try:
+            self.cursor.execute(f"DELETE FROM vendedores WHERE id_vendedor = {id_vendedor}")
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def select_vendedor(self):
+        self.connect()
+        try:
+            self.cursor.execute(f"SELECT * FROM vendedores")
+            result = self.cursor.fetchall()
+            return result
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def select_by_id_vendedor(self,id_vendedor):
+        self.connect()
+        try:
+            self.cursor.execute(f"SELECT * FROM vendedores WHERE id_vendedor = {id_vendedor}")
+            result = self.cursor.fetchone()
+            return result
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def update_vendedor(self, tupla):
+        self.connect()
+        try:
+            self.cursor.execute(f"""UPDATE vendedores SET nome = '{tupla[1]}', cod_vendedor = '{tupla[2]}', fone = '{tupla[3]}' WHERE id_vendedor = {tupla[0]}""")
+            self.conn.commit()
+            return True
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+    
+    
+    #para o card
+    def insert_card(self, tupla):
+        self.connect()
+        try:
+            self.cursor.execute("INSERT INTO cards (nome_card, preco_card, qtde_card, raridade_card, edicao_card) VALUES(%s, %s, %s, %s, %s)", tupla)
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def delete_card(self, id_card):
+        self.connect()
+        try:
+            self.cursor.execute(f"DELETE FROM cards WHERE id_card = {id_card}")
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def select_card(self):
+        self.connect()
+        try:
+            self.cursor.execute(f"SELECT * FROM cards")
+            result = self.cursor.fetchall()
+            return result
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def select_by_id_card(self,id_card):
+        self.connect()
+        try:
+            self.cursor.execute(f"SELECT * FROM card WHERE id_card = {id_card}")
+            result = self.cursor.fetchone()
+            return result
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def update_card(self, tupla):
+        self.connect()
+        try:
+            self.cursor.execute(f"""UPDATE card SET nome_card = '{tupla[1]}', preco_card = '{tupla[2]}', qtde_card = '{tupla[3]}, raridade_card = {tupla[4]}, edicao_card = {tupla[5]}' WHERE id_vendedor = {tupla[0]}""")
+            self.conn.commit()
+            return True
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+
+    #fim codigo database
     def close_connection(self):
         if self.conn.is_connected():
             self.cursor.close()
