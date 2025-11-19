@@ -186,7 +186,7 @@ class Database:
     def select_by_id_card(self,id_card):
         self.connect()
         try:
-            self.cursor.execute(f"SELECT * FROM card WHERE id_card = {id_card}")
+            self.cursor.execute(f"SELECT * FROM cards WHERE id_card = {id_card}")
             result = self.cursor.fetchone()
             return result
         
@@ -199,7 +199,7 @@ class Database:
     def update_card(self, tupla):
         self.connect()
         try:
-            self.cursor.execute(f"""UPDATE card SET nome_card = '{tupla[1]}', preco_card = '{tupla[2]}', qtde_card = '{tupla[3]}, raridade_card = {tupla[4]}, edicao_card = {tupla[5]}' WHERE id_vendedor = {tupla[0]}""")
+            self.cursor.execute(f"""UPDATE cards SET nome_card = '{tupla[1]}', preco_card = '{tupla[2]}', qtde_card = '{tupla[3]}', raridade_card = '{tupla[4]}', edicao_card = '{tupla[5]}' WHERE id_card = {tupla[0]}""")
             self.conn.commit()
             return True
         
@@ -209,8 +209,73 @@ class Database:
         finally:
             self.close_connection()
 
+    
+    # registrar venda
 
-    #fim codigo database
+    def insert_venda(self, tupla):
+        self.connect()
+        try:
+            self.cursor.execute("INSERT INTO vendas (nome_card, qtde_venda, valor_total) VALUES(%s, %s, %s)", tupla)
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def delete_venda(self, id_venda):
+        self.connect()
+        try:
+            self.cursor.execute(f"DELETE FROM vendas WHERE id_venda = {id_venda}")
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def select_venda(self):
+        self.connect()
+        try:
+            self.cursor.execute(f"SELECT * FROM vendas")
+            result = self.cursor.fetchall()
+            return result
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def select_by_id_venda(self,id_venda):
+        self.connect()
+        try:
+            self.cursor.execute(f"SELECT * FROM vendas WHERE id_venda = {id_venda}")
+            result = self.cursor.fetchone()
+            return result
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def update_venda(self, tupla):
+        self.connect()
+        try:
+            self.cursor.execute(f"""UPDATE vendas SET nome_card = '{tupla[1]}', qtde_venda = '{tupla[2]}', valor_total = '{tupla[3]}' WHERE id_venda = {tupla[0]}""")
+            self.conn.commit()
+            return True
+        
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    
     def close_connection(self):
         if self.conn.is_connected():
             self.cursor.close()
