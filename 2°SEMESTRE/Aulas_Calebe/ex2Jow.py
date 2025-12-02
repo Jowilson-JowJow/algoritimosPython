@@ -1,5 +1,5 @@
 #Exercício 2 - Sistema de Vendas (Loja Virtual)
-# Classe Cliente
+
 class Cliente:
     def __init__(self, identificacao, nome, cpf, email, telefone):
         self.identificacao = identificacao
@@ -21,7 +21,6 @@ class Cliente:
         print(f"Exibindo pedidos do cliente {self.nome}.")
 
 
-# Classe Produto
 class Produto:
     def __init__(self, codigo, nome, descricao, qtd_estoque, preco):
         self.codigo = codigo
@@ -40,7 +39,6 @@ class Produto:
         print(f"Produto: {self.nome} | Preço: {self.preco:.2f} | Estoque: {self.qtd_estoque}")
 
 
-# Classe ItemPedido
 class ItemPedido:
     def __init__(self, codigo, quantidade, preco_unitario):
         self.codigo = codigo
@@ -59,7 +57,6 @@ class ItemPedido:
         print(f"Item: {self.codigo} | Quantidade: {self.quantidade} | SubTotal: {self.subtotal:.2f}")
 
 
-# Classe Pedido
 class Pedido:
     def __init__(self, identificador, data, status):
         self.identificador = identificador
@@ -85,7 +82,6 @@ class Pedido:
         return total
 
 
-# Classe Pagamento
 class Pagamento:
     def __init__(self, codigo, valor_pago, forma_pagamento, data):
         self.codigo = codigo
@@ -104,7 +100,6 @@ class Pagamento:
 
 
 
-# ---------------- TESTE SIMPLES ----------------
 
 cliente = Cliente("001", "João", "111.222.333-44", "joao@email.com", "99999-0000")
 cliente.cadastrar()

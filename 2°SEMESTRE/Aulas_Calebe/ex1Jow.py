@@ -1,6 +1,6 @@
 #Exercício 1 - Sistema de Agendamento (Clínica de Estética)
 
-# ------------------- CLASSE CLIENTE -------------------
+
 class Cliente:
     def __init__(self, nome, cpf, telefone, email, endereco):
         self.nome = nome
@@ -23,14 +23,13 @@ class Cliente:
         print(f"Mostrando agendamentos do cliente {self.nome}")
 
 
-# ------------------- CLASSE PROFISSIONAL -------------------
 class Profissional:
     def __init__(self, nome, especialidade, registro_profissional, telefone, disponivel):
         self.nome = nome
         self.especialidade = especialidade
         self.registro_profissional = registro_profissional
         self.telefone = telefone
-        self.disponivel = disponivel  # True / False
+        self.disponivel = disponivel 
 
     def verificar_disponibilidade(self):
         if self.disponivel:
@@ -45,7 +44,6 @@ class Profissional:
         print(f"Horário {horario} removido para o profissional {self.nome}")
 
 
-# ------------------- CLASSE SERVIÇO -------------------
 class Servico:
     def __init__(self, codigo_descricao, nome, descricao, duracao_min, preco):
         self.codigo_descricao = codigo_descricao
@@ -65,13 +63,12 @@ class Servico:
         print(f"Serviço: {self.nome} | Preço: {self.preco:.2f} | Duração: {self.duracao_min} min")
 
 
-# ------------------- CLASSE AGENDAMENTO -------------------
 class Agendamento:
     def __init__(self, codigo, data, hora, status):
         self.codigo = codigo
         self.data = data
         self.hora = hora
-        self.status = status  # confirmado, cancelado, realizado
+        self.status = status 
 
     def criar_agendamento(self):
         self.status = "confirmado"
@@ -86,14 +83,13 @@ class Agendamento:
         print(f"Agendamento {self.codigo} CONFIRMADO novamente")
 
 
-# ------------------- CLASSE PAGAMENTO -------------------
 class Pagamento:
     def __init__(self, identificador, valor, forma_pagamento, data, status):
         self.identificador = identificador
         self.valor = valor
         self.forma_pagamento = forma_pagamento
         self.data = data
-        self.status = status  # Pendente, Processando, Falhou
+        self.status = status  
 
     def processar_pagamento(self):
         self.status = "Processando"
