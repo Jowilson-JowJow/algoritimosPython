@@ -126,14 +126,14 @@ def jogar():
         if all(letra in letras_certas for letra in palavra):
             print('='*50)
             print(' '*14+ 'Parabéns, você ganhou!')
-            print(f"' '*14+ ''A palavra é:' {palavra}'")
+            print(f"{' '*14}'A palavra é:' {palavra}'")
             print('='*50)
             break
 
         if(len(letras_erradas)>= tentativas_max):
             print('='*50)
             print(' '*17+ 'wasted - PERDEU')
-            print(f"' '*14+ ''A palavra é:' {palavra}'")
+            print(f"{' '*14}'A palavra é:' {palavra}'")
             print('='*50)
             break
 
