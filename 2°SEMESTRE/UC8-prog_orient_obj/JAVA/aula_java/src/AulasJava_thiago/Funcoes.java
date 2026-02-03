@@ -1,3 +1,6 @@
+package AulasJava_thiago;
+
+
 public class Funcoes{
 
     public static void main (String[] args){

@@ -11,7 +11,7 @@ public class ex36_jow {;
 
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Digite o preço de custo do automovle: ");
+        System.out.println("Digite o preço de custo do automoveL: ");
         double custo=scan.nextDouble();
         double preco =0;
         if (custo<12000){
@@ -25,7 +25,8 @@ public class ex36_jow {;
         else if(custo>25000){
             preco=custo+custo*0.15+custo*0.2;
             System.out.println("O preço de custo do veiculo é R$ "+custo+" E o preço de venda é de R$ "+preco);
-        }  
+        } 
+        scan.close();
 
 
     }

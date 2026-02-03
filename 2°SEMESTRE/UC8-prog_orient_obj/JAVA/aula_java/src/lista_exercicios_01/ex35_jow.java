@@ -49,6 +49,7 @@ public class ex35_jow {
             novo_salario=salario+500;
             System.out.println("seu novo salario é de R$ "+novo_salario);
         }
+        scan.close();
 
     }
     
